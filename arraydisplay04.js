@@ -1,6 +1,6 @@
 // Programmer:  BKP
 // Date: 09/05/2017
-// Subject:  Create two-dimensionmal array using Randomizers
+// Subject:  Create and display two-dimensionmal array data
 // arRow is current row of array
 // arCol is current column of array
 // maxRow and maxCol are maxium size of arrays rows and columns
@@ -52,6 +52,7 @@ for (arRow=0; arRow<maxRow; arRow++) {
 //  console.log('| Row: ',arRow,' | Stored Value: ',matches[arRow],' |');
   var printLine = '';
   var printLine = matches[arRow].toLocaleString();
+  printLine.replace(',',' * ');
   console.log(arRow,printLine);
 }
 //
