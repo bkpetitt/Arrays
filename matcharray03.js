@@ -65,12 +65,11 @@ console.log('^^------------------------^^')
 // console.log('Array Height (total matches): ', maxRow);
 console.log('Number Matches: ', maxRow);
 console.log('Number of Match Elements: ', maxCol);
-// console.log('^^------------------------^^')
+console.log('^^------------------------^^')
 //
 //
+console.log('row#','day:', 'month:', 'date:','opponent:','locale:','time:','lafScore','oppScore','OT','sh','sog');
 for (arRow=0; arRow<maxRow; arRow++) {
-console.log('day:', 'month:', 'date:','opponent:','locale:','time:','lafScore','oppScore','OT','sh','sog');
-
 //  console.log('Row: ',arRow,' Stored Value: ',matches[arRow]);
   console.log(arRow,matches[arRow]);
   var totalLaf = totalLaf + matches[arRow][6];
