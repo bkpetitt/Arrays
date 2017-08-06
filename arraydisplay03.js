@@ -35,59 +35,24 @@ var arCol = 0;
 var maxRow = 0;
 var maxCol = 0;
 //
-var totalLaf = 0;
-var totalOpp = 0;
-var totalOt = 0;
-var totalWin = 0;
-var totalLoss = 0;
-var totalDraw = 0;
-var totalHWin = 0;
-var totalHLoss = 0;
-var totalHDraw = 0;
-var totalAWin = 0;
-var totalALoss = 0;
-var totalADraw = 0;
-var totalConf = 0;
 //
-var cntHome = 0;
-var cntAway = 0;
-var recHome = 0;
-var recAway = 0;
-
-//
-//
-// determine number of rows
+// determine number of records
 var maxRow = matches.length;
-// determine length of columns
+// determine number of record elements
 var maxCol = matches[0].length;
 //
 console.log('^^------------------------^^')
-// console.log('Array Height (total matches): ', maxRow);
-console.log('Number Matches: ', maxRow);
-console.log('Number of Match Elements: ', maxCol);
+console.log('Number of records: ', maxRow);
+console.log('Number of record elements: ', maxCol);
 console.log('^^------------------------^^')
 //
+console.log('rec#','day:','month:','date:','opponent:','locale:','time:','lafScore','oppScore','OT','sh','sog');
 //
 for (arRow=0; arRow<maxRow; arRow++) {
 //  console.log('| Row: ',arRow,' | Stored Value: ',matches[arRow],' |');
   var printLine = '';
-//  for (arCol=0; arCol<maxCol; arCol++) {
-    var printLine = matches[arRow].toLocaleString();
-//    }
-    console.log('*',printLine);
+  var printLine = matches[arRow].toLocaleString();
+  console.log(arRow,printLine);
 }
-//
-//
-console.log('^^------------------------^^')
-console.log('LAF Record: ',totalWin,'-',totalLoss,'-',totalDraw);
-console.log('LAF Home Record: ',totalHWin,'-',totalHLoss,'-',totalHDraw);
-console.log('LAF Away Record: ',totalAWin,'-',totalALoss,'-',totalADraw);
-console.log('^^------------------------^^')
-console.log('Total LAF goals: ', totalLaf);
-console.log('Total Opp goals: ', totalOpp);
-console.log('Total Home Matches: ', cntHome);
-console.log('Total Away Matches: ', cntAway);
-console.log('Total OT Matches: ', totalOt);
-console.log('Total Conf Matches: ', totalConf);
 //
 //

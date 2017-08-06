@@ -68,13 +68,53 @@ console.log('Number of Match Elements: ', maxCol);
 console.log('^^------------------------^^')
 //
 //
-for (arRow=0; arRow<maxRow; arRow++) {
+for (arRow=0; arRow<5; arRow++) {
 //  console.log('| Row: ',arRow,' | Stored Value: ',matches[arRow],' |');
   var printLine = '';
-//  for (arCol=0; arCol<maxCol; arCol++) {
-    var printLine = matches[arRow].toLocaleString();
-//    }
+  for (arCol=0; arCol<maxCol; arCol++) {
+    printLine.concat(' | ', matches[arRow][arCol]);
+    }
     console.log('*',printLine);
+//
+  var totalLaf = totalLaf + matches[arRow][6];
+  var totalOpp = totalOpp + matches[arRow][7];
+//
+// calculating complete record
+if (matches[arRow][6]===matches[arRow][7]) {
+  var totalDraw = totalDraw + 1;}
+  else if (matches[arRow][6]>matches[arRow][7]) {
+    var totalWin = totalWin + 1;}
+    else {
+      var totalLoss = totalLoss + 1;}
+//
+// calculating home record
+if (matches[arRow][4]==='Home') {
+  var cntHome = cntHome + 1;}
+  else if (matches[arRow][6]===matches[arRow][7]) {
+    var totalHDraw = totalHDraw + 1;}
+    else if (matches[arRow][6]>matches[arRow][7]) {
+      var totalHWin = totalHWin + 1;}
+      else {
+        var totalHLoss = totalHLoss + 1;}
+//
+// calculating away record
+if (matches[arRow][4]==='Away') {
+  var cntAway = cntAway + 1;}
+  else if (matches[arRow][6]===matches[arRow][7]) {
+    var totalADraw = totalADraw + 1;}
+    else if (matches[arRow][6]>matches[arRow][7]) {
+      var totalAWin = totalAWin + 1;}
+      else {
+        var totalALoss = totalALoss + 1;}
+//
+// determine OT matches
+if (matches[arRow][8]) {
+  var totalOt = totalOt + 1;}
+//
+//
+if (matches[arRow][3].endsWith('*')) {
+//  console.log(totalConf);
+  var totalConf = totalConf + 1;}
 }
 //
 //
