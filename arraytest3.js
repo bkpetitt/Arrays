@@ -24,14 +24,20 @@ var games= [
 ];
 // console.log(games);
 console.log(games.length);
+// var row = 0;
+// var col = 0;
 //
 //
-var loopCount;
-for (loopCount=0; loopCount<games.length; loopCount++) {
-console.log(games[loopCount]);
+for (row=0; row<games.length; row++) {
+  for (col=0; col<6; col++) {
+    console.log(row,col,games[row][col]);
+  }
 }
-// games.push('Navy');
-var pos = games.indexOf('Yale');
-console.log(pos);
+//
+//
+// var pos1 = games[row][col];
+var pos2 = games[3][3];
+// console.log(pos1);
+console.log(pos2);
 // games.findIndex('Navy');
 // console.log(My Pig Latin name is "+pigFinal);
