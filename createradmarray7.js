@@ -8,8 +8,10 @@
 //
 var arRow = 0;
 var arCol = 0;
-var maxRow = 9;
-var maxCol = 5;
+var maxRow = 10;
+var maxCol = 10;
+var minRange = 10;
+var maxRange = 99;
 //
 // var maxRow = Number(prompt("Rows: ",""));
 // var maxCol = Number(prompt("Columns: ",""));
@@ -25,7 +27,9 @@ console.log('Array Height: ', maxRow);
 for (arRow=0; arRow<maxRow; arRow++) {
     avgFTemp[arRow] = new Array(maxCol);
     for (arCol=0; arCol<maxCol; arCol++) {
-      avgFTemp[arRow][arCol] = Math.floor(((Math.random()*85)+1));
+// randomizer using math.random and math.floor
+// using max and minimum range limiters
+      avgFTemp[arRow][arCol] = Math.floor((Math.random()*(maxRange-minRange+1))+minRange);
     }
   console.log('Row: ',arRow,' Stored Value: ',avgFTemp[arRow]);
 }
