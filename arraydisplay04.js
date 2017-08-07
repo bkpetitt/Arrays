@@ -5,7 +5,6 @@
 // arCol is current column of array
 // maxRow and maxCol are maxium size of arrays rows and columns
 //
-
 //
 var matches= [
 // ['day:','month:','date:','opponent:','locale:','time:','lafScore','oppScore','OT','sh','sog'],
@@ -49,10 +48,9 @@ console.log('^^------------------------^^')
 console.log('rec#','day:','month:','date:','opponent:','locale:','time:','lafScore','oppScore','OT','sh','sog');
 //
 for (arRow=0; arRow<maxRow; arRow++) {
-//  console.log('| Row: ',arRow,' | Stored Value: ',matches[arRow],' |');
+//  
   var printLine = '';
   var printLine = matches[arRow].toLocaleString();
-  printLine.replace(',',' * ');
   console.log(arRow,printLine);
 }
 //
