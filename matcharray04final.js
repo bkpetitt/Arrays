@@ -68,13 +68,13 @@ console.log('^^------------------------^^')
 //
 //
 console.log('row#','day:', 'month:', 'date:','opponent:','locale:','time:','lafScore','oppScore','OT','sh','sog');
-// console.log(matches);
+//
 for (arRow=0; arRow<maxRow; arRow++) {
-//  console.log('Row: ',arRow,' Stored Value: ',matches[arRow]);
+//
   var printLine = '';
   var printLine = matches[arRow].toLocaleString();
   console.log(arRow,printLine);
-//  console.log(arRow,matches[arRow]);
+//
   var totalLaf = totalLaf + matches[arRow][6];
   var totalOpp = totalOpp + matches[arRow][7];
 //
